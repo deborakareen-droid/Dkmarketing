@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio DK Marketing – Acesso</title>
+  <meta name="description" content="Página inicial com link para o portfólio em HTML da DK Marketing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #151515;
+      --text: #f7f7f7;
+      --muted: #b9b9b9;
+      --brand: #ffa700; /* laranja do arquivo */
+      --brand-2: #ff7a00;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0; background: radial-gradient(1200px 600px at 80% -10%, rgba(255,167,0,0.12), transparent 60%), var(--bg);
+      color: var(--text); font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 0 }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .5px }
+    .brand-mark { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display: grid; place-items: center; color: #111; font-weight: 900 }
+    nav { display: flex; gap: 18px; flex-wrap: wrap }
+    nav a { opacity: .9 }
+    nav a:hover { opacity: 1 }
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 14px 18px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #111; font-weight: 800; letter-spacing: .2px; transition: transform .15s ease }
+    .cta:hover { transform: translateY(-2px) }
+
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; padding: 32px 0 12px }
+    .hero h1 { font-size: clamp(32px, 4vw, 56px); line-height: 1.07; margin: 0 0 12px }
+    .pill { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; color: #111; font-weight: 700; padding: 8px 12px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
+    .muted { color: var(--muted) }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 40px rgba(0,0,0,.35); border-radius: var(--radius); overflow: hidden }
+    .preview { height: 520px; background: #0e0e0e }
+    iframe { width: 100%; height: 100%; border: 0; background: #000 }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+    .feature { padding: 18px; border-radius: 16px; background: #121212; border: 1px solid rgba(255,255,255,0.06) }
+    .feature h3 { margin: 0 0 6px; font-size: 16px }
+    .feature p { margin: 0; font-size: 14px; color: var(--muted) }
+
+    footer { margin-top: 36px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.08); color: var(--muted); font-size: 14px }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .preview { height: 380px }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-mark">DK</div>
+        <span>DK Marketing</span>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="cta" href="Port.%20DK%20Marketing-converted.html" target="_blank" rel="noopener">Abrir Portfólio</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="pill">Portfólio atualizado</span>
+        <h1>Apresentação de Portfólio<br>DK Marketing</h1>
+        <p class="muted">Clique no botão para abrir o arquivo do portfólio em nova aba ou visualize abaixo o preview incorporado.</p>
+        <div style="display:flex; gap:12px; margin-top:16px">
+          <a class="cta" href="Port.%20DK%20Marketing-converted.html" target="_blank" rel="noopener">Abrir em nova aba ↗</a>
+          <a class="cta" href="#portfolio" style="background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.2)" >Ver preview ↓</a>
+        </div>
+        <div class="grid" id="sobre">
+          <div class="feature">
+            <h3>Design ousado</h3>
+            <p>Paleta preta & laranja para destacar resultados e tendências.</p>
+          </div>
+          <div class="feature">
+            <h3>Compatível</h3>
+            <p>Funciona em desktop e mobile. Link direto para o HTML do portfólio.</p>
+          </div>
+          <div class="feature">
+            <h3>Simples de publicar</h3>
+            <p>Basta colocar este <em>index.html</em> na mesma pasta do arquivo do portfólio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card preview" id="portfolio" aria-label="Pré-visualização do Portfólio">
+        <!-- Se o arquivo estiver na mesma pasta, o iframe mostra o conteúdo -->
+        <iframe src="Port.%20DK%20Marketing-converted.html" title="Preview do Portfólio DK Marketing"></iframe>
+      </div>
+    </section>
+
+    <footer id="contato">
+      <div>© <span id="year"></span> DK Marketing — Todos os direitos reservados.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
